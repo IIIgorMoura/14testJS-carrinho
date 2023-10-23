@@ -58,7 +58,7 @@ function removeCarrinho(itemNome, itemPreco) {
 }
 
 function updateCarrinho() {
-
+    let cont = document.getElementById("cont-carrinho")
 }
 
 function limparCarrinho() {
@@ -71,4 +71,14 @@ function limparCarrinho() {
     }
 
     updateCarrinho()
+}
+
+function toggleCarrinho() {
+    const itensCarrinhoDiv = document.getElementById("carrinho-itens")
+
+    if (itensCarrinhoDiv.style.display == "none") {
+        itensCarrinhoDiv.style.display = "block"
+    } else {
+        itensCarrinhoDiv.style.display = "none"
+    }
 }
