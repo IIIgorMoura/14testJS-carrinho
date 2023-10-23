@@ -51,7 +51,24 @@ function removeCarrinho(itemNome, itemPreco) {
             document.getElementById("itens-lista").removeChild(itensCarrinho[itemNome].liItem)
             delete itensCarrinho[itemNome]
         }
-
+        updateCarrinho()
+        document.getElementById("preco-total").innerHTML = "Valor Total: R$" + precoTotal.toFixed(2)
         updateCarrinho()
     }
+}
+
+function updateCarrinho() {
+
+}
+
+function limparCarrinho() {
+    document.getElementById("itens-lista").innerHTML = "";
+
+    document.getElementById("preco-lista").innerHTML = "Valor Total R$ 0.00";
+
+    for(let itemNome in itensCarrinho) {
+        delete itensCarrinho[itemNome]
+    }
+
+    updateCarrinho()
 }
