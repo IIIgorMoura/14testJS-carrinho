@@ -1,0 +1,180 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;   
+}
+
+body {
+    background-color: #0941dd;
+}
+
+/* text */
+h5 {
+    color: #fff;
+    font: 1000 30px arial;
+}
+
+h2 {
+    font: 800 20px arial;
+    color: #000;
+}
+
+p {
+    font: 200 15px arial;
+}
+/* header */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+#imgLogo {
+    width: 75px;
+    height: 75px;
+}
+
+#carrinho-icon img {
+    width: 50px;
+}
+
+#header {
+    margin: 0 100px;
+}
+
+#carrinho-icon {
+    cursor: pointer;
+
+    display: flex;
+    align-items: baseline;
+
+    background-color: #fff;
+
+    width: 75px;
+    height: 50px;
+    border-radius: 5px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #dc7514;
+}
+
+#carrinhoBranco {
+    color: #dc7514;
+}
+
+#buscar {
+    display: flex;
+    flex-direction: row;
+}
+
+#botaoBuscar {
+    width: 75px;
+    height: 35px;
+
+    border-radius: 5px;
+}
+
+#buscar-input {
+    width: 600px;
+    height: 35px;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    border: 3px solid #dc7514;
+}
+/* itens */
+img {
+    display: flex;
+
+    width: 250px;
+    height: 250px;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+}
+
+.produto-linha {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    margin: 25px;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 25px;
+    background-color: #fff;
+
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+   transition: 750ms;
+}
+
+.produto:hover {
+    transform: scale(1.1);
+}
+
+.espacamento {
+    margin: 10px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 225px;
+    height: 40px;
+
+    border-radius: 25px;
+
+    color: #fff;
+    font: 800 15px arial;
+    background-color: #44b905;
+
+    transition: 500ms;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

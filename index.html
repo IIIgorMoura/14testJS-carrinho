@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/78f0f143f5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img id="imgLogo" src="logo.png" alt="">
+                <h5 class="logo-nome">CAIXA ECONÔMICA<span>.</span></h5>
+            </div>
+
+            <div id="buscar">
+                <input type="text" id="buscar-input" placeholder="Pesquisar produto" oninput="buscarProdutos()">
+
+                <button id="botaoBuscar" onclick="buscarSite()">Buscar</button>
+            </div>
+
+            <div id="carrinho-icon" onclick="toggleCarrinho()">
+                <div class="imagem">
+                    <i id="carrinhoBranco" class="fa-solid fa-basket-shopping fa-2xl"></i>
+                </div>
+
+                <span class="espacamento" id="cont-carrinho">0</span>
+            </div>
+
+            <div id="carrinho-itens" style="display: none;">
+                <ul id="itens-lista"></ul>
+
+                <span id="preco-total">
+                    Valor Total: R$0,00
+                </span>
+
+                <button onclick="limparCarrinho()">Limpar Carrinho</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="produtos">
+
+                <div class="produto-linha">
+                    <div class="produto">
+                        <img class="espacamento" src="image1.jpeg" alt="">
+                        <div class="infos">
+                            <h2 class="espacamento">MEGA DA VIRADA</h2>
+                            <p class="espacamento">R$ 100.00</p>
+                            <button class="espacamento" onclick="addCarrinho('MEGA DA VIRADA', 100.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <img class="espacamento" src="image2.jpg" alt="">
+                        <div class="infos">
+                            <h2 class="espacamento">QUINA</h2>
+                            <p class="espacamento">R$ 1.50</p>
+                            <button class="espacamento" onclick="addCarrinho('QUINA', 1.50)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <img class="espacamento" src="image3.webp" alt="">
+                        <div class="infos">
+                            <h2 class="espacamento">MEGA SENA</h2>
+                            <p class="espacamento">R$ 1.00</p>
+                            <button class="espacamento" onclick="addCarrinho('MEGA SENA', 1.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-linha">
+                    <div class="produto">
+                        <img class="espacamento" src="image4.webp" alt="">
+                        <div class="infos">
+                            <h2 class="espacamento">LOTOFÁCIL</h2>
+                            <p class="espacamento">R$ 2.00</p>
+                            <button class="espacamento" onclick="addCarrinho('LOTOFÁCIL', 2.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <img class="espacamento" src="image5.jpg" alt="">
+                        <div class="infos">
+                            <h2 class="espacamento">DUPLA SENA</h2>
+                            <p class="espacamento">R$ 3.00</p>
+                            <button class="espacamento" onclick="addCarrinho('DUPLA SENA', 3.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <img class="espacamento" src="image6.webp" alt="">
+                        <div class="infos">
+                            <h2 class="espacamento">LOTOMANIA</h2>
+                            <p class="espacamento">R$ 5.00</p>
+                            <button class="espacamento" onclick="addCarrinho('LOTOMANIA', 5.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- script JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
