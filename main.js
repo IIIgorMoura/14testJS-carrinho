@@ -11,11 +11,11 @@ function addCarrinho(itemNome, itemPreco) {
         liItem.innerHTML = `
         <div class="item">
             <span>${itemNome}</span>
-            <button class="add" onclick="addCarrinho('${itemNome}', ${itemPreco})"> + </button>
+            <button class="add" id="botaoCarrinho" onclick="addCarrinho('${itemNome}', ${itemPreco})"> + </button>
 
             <span class="quantity"> 1 </span>
 
-            <button class="remove" onclick="removeCarrinho('${itemNome}', ${itemPreco})"> - </button>
+            <button class="remove" id="botaoCarrinho" onclick="removeCarrinho('${itemNome}', ${itemPreco})"> - </button>
 
             <span class="preco-total">R$${itemPreco.toFixed(2)}</span>
         </div>
