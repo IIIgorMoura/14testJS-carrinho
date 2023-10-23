@@ -1,11 +1,11 @@
 const itensCarrinho = {}
 
-function addCarrinho(itemNome, itemPreco){
-    if(itensCarrinho[itemNome]){
+function addCarrinho(itemNome, itemPreco) {
+    if (itensCarrinho[itemNome]) {
         itensCarrinho[itemNome].quantity++
         itensCarrinho[itemNome].precoTotal += itemPreco
         itensCarrinho[itemNome].liItem.querySelector(".quantity").innerHTML = itensCarrinho[itemNome].quantity;
-        itensCarrinho[itemNome].liItem.querySelector("preco-total").innerHTML = "R$" + itensCarrinho[itemNome.precoTotal].toFixed(2)
+        itensCarrinho[itemNome].liItem.querySelector("preco-total").innerHTML = "R$" + itensCarrinho[itemNome].precoTotal.toFixed(2)
     } else {
         const liItem = document.createElement("li")
         liItem.innerHTML = `
@@ -31,9 +31,24 @@ function addCarrinho(itemNome, itemPreco){
     }
 
     let precoTotal = 0
-    for(let itemNome in itensCarrinho) {
+    for (let itemNome in itensCarrinho) {
         precoTotal += itensCarrinho[itemNome].precoTotal
     }
 
-    document.getElementById("preco-total").innerHTML = "Valor Total "
+    document.getElementById("preco-total").innerHTML = "Valor Total R$" + precoTotal.toFixed(2)
+
+    updateCarrinho()
+}
+
+function removeCarrinho(itemNome, itemPreco) {
+    if (itensCarrinho[itemNome]) {
+        if (itensCarrinho[itemNome].quantity > 1) {
+            itensCarrinho[itemNome].quantity--
+            itensCarrinho[itemNome].precoTotal -= itemPreco
+            itensCarrinho[itemNome].liItem.querySelector(".quantity").innerHTML = itensCarrinho[itemNome].quantity
+            itensCarrinho[itemNome].liItem.querySelector(".preco-total").innerHTML = "R$" + itensCarrinho[itemNome].precoTotal.toFixed(2)
+        } else {
+
+        }
+    }
 }
