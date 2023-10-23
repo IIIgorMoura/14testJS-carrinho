@@ -64,7 +64,7 @@ function updateCarrinho() {
 function limparCarrinho() {
     document.getElementById("itens-lista").innerHTML = "";
 
-    document.getElementById("preco-lista").innerHTML = "Valor Total R$ 0.00";
+    document.getElementById("preco-total").innerHTML = "Valor Total R$0.00";
 
     for(let itemNome in itensCarrinho) {
         delete itensCarrinho[itemNome]
