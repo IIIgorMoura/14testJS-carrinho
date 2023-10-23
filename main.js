@@ -48,7 +48,10 @@ function removeCarrinho(itemNome, itemPreco) {
             itensCarrinho[itemNome].liItem.querySelector(".quantity").innerHTML = itensCarrinho[itemNome].quantity
             itensCarrinho[itemNome].liItem.querySelector(".preco-total").innerHTML = "R$" + itensCarrinho[itemNome].precoTotal.toFixed(2)
         } else {
-
+            document.getElementById("itens-lista").removeChild(itensCarrinho[itemNome].liItem)
+            delete itensCarrinho[itemNome]
         }
+
+        updateCarrinho()
     }
 }
