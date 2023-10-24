@@ -14,16 +14,20 @@ function addCarrinho(itemNome, itemPreco) {
             <div id="topoItem">
                 <span>${itemNome}</span>
 
-                <span class="preco-total">R$${itemPreco.toFixed(2)}</span>
+                <div class="quantidade">
+                    <button class="add" id="botaoCarrinho" onclick="addCarrinho('${itemNome}', ${itemPreco})"> + </button>
+
+                    <span class="quantity"> 1 </span>
+
+                    <button class="remove" id="botaoCarrinho" onclick="removeCarrinho('${itemNome}', ${itemPreco})"> - </button>
+                </div>              
             </div>
 
 
             <div class="conteudoItem">
-                <button class="add" id="botaoCarrinho" onclick="addCarrinho('${itemNome}', ${itemPreco})"> + </button>
 
-                <span class="quantity"> 1 </span>
+                <span class="preco-total">R$${itemPreco.toFixed(2)}</span>
 
-                <button class="remove" id="botaoCarrinho" onclick="removeCarrinho('${itemNome}', ${itemPreco})"> - </button>
             </div>
 
         </div>
@@ -66,8 +70,14 @@ function removeCarrinho(itemNome, itemPreco) {
 }
 
 function updateCarrinho() {
-    let cont = document.getElementById("cont-carrinho")
+    let cont = 0;
+    for (let item in itensCarrinho) {
+        cont += itensCarrinho[item].quantity;
+    }
+
+    document.getElementById("cont-carrinho").innerHTML = cont;
 }
+
 
 function limparCarrinho() {
     document.getElementById("itens-lista").innerHTML = "";
@@ -88,6 +98,20 @@ function toggleCarrinho() {
         itensCarrinhoDiv.style.display = "block"
     } else {
         itensCarrinhoDiv.style.display = "none"
+    }
+}
+
+function buscarProdutos() {
+    const buscarInput = document.getElementById("buscar-input");
+    const produto = document.getElementsByClassName("produto");
+
+    for (let i = 0; i < produto.length; i++) {
+        const produtoNome = produto[i].querySelector("h2").innerText.toLowerCase();
+        if (produtoNome.includes(buscarInput.value.toLowerCase())) {
+            produto[i].style.display = "flex";
+        } else {
+            produto[i].style.display = "none";
+        }
     }
 }
 

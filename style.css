@@ -11,7 +11,7 @@ img {
 }
 
 body {
-    background-color: #0941dd;
+    background-image: linear-gradient(to bottom right, #0941dd, #098fdd);
 }
 
 /* text */
@@ -40,6 +40,7 @@ p {
     flex-direction: row;
 
     align-items: center;
+    justify-content: center;
 }
 
 #imgLogo {
@@ -63,7 +64,7 @@ p {
 
     background-color: #fff;
 
-    width: 75px;
+    width: 100px;
     height: 50px;
     border-radius: 5px;
 
@@ -103,8 +104,13 @@ p {
 img {
     display: flex;
 
-    width: 250px;
-    height: 250px;
+    width: 375px;
+    height: 210px;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+    margin-bottom: 20px;
 }
 
 .produtos {
@@ -130,8 +136,8 @@ img {
     align-items: center;
     justify-content: center;
 
-    width: 350px;
-    height: 350px;
+    width: 375px;
+    height: 375px;
 
     border-radius: 25px;
     background-color: #fff;
@@ -180,11 +186,22 @@ button:hover {
 }
 
 /* carrinho */
+.centralizarTopoMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #botaoCarrinho {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 
     font-size: 20px;
+
+    border: 2px solid #fff;
+    background: none;
+
 
     border-radius: 50%;
 }
@@ -194,11 +211,12 @@ button:hover {
     flex-direction: column;
 
     background-color: #dc7514;
+    
 
     align-items: center;
     justify-content: center;
 
-    width: 400px;
+    width: 450px;
     height: 100vh;
 
     padding: 10px;
@@ -208,6 +226,10 @@ button:hover {
     position: fixed;
     right: 0;
     top: 0;
+}
+
+#cont-carrinho {
+    font: 400 15px arial;
 }
 
 #fechar {
@@ -233,16 +255,26 @@ ul {
 .item {
     display: flex;
 
-    flex-direction: column;
-    margin: 10px;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 400px;
+
+    margin: 50px 20px;
 
     color: #fff;
-    font: 600 15px arial;
+    font: 600 20px arial;
 }
 
 .topoItem {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+
+    width: 300px;
+
+    margin: 10px;
 }
 
 .conteudoItem {
@@ -250,5 +282,18 @@ ul {
     flex-direction: row;
 
     align-items: center;
+
+    margin: 20px;
 }
+
+.quantity {
+    margin: 0px 15px;
+}
+
+.quantidade {
+    display: flex;
+    flex-direction: row;
+}
+
+
 
