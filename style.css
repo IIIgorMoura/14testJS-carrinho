@@ -188,3 +188,67 @@ button:hover {
 
     border-radius: 50%;
 }
+
+#carrinho-itens {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #dc7514;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 400px;
+    height: 100vh;
+
+    padding: 10px;
+
+    z-index: 10;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+#fechar {
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+#caixaTopoMenu {
+    display: flex;
+    margin: 20px;
+    width: 300px;
+
+    justify-content: space-around;
+    align-items: center;
+
+    color: #fff;
+    font: 800 20px arial;
+}
+
+.item {
+    display: flex;
+
+    flex-direction: column;
+    margin: 10px;
+
+    color: #fff;
+    font: 600 15px arial;
+}
+
+.topoItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.conteudoItem {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+

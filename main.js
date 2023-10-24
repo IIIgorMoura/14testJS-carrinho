@@ -5,19 +5,27 @@ function addCarrinho(itemNome, itemPreco) {
         itensCarrinho[itemNome].quantity++
         itensCarrinho[itemNome].precoTotal += itemPreco
         itensCarrinho[itemNome].liItem.querySelector(".quantity").innerHTML = itensCarrinho[itemNome].quantity;
-        itensCarrinho[itemNome].liItem.querySelector("preco-total").innerHTML = "R$" + itensCarrinho[itemNome].precoTotal.toFixed(2)
+        itensCarrinho[itemNome].liItem.querySelector(".preco-total").innerHTML = "R$" + itensCarrinho[itemNome].precoTotal.toFixed(2)
     } else {
         const liItem = document.createElement("li")
         liItem.innerHTML = `
         <div class="item">
-            <span>${itemNome}</span>
-            <button class="add" id="botaoCarrinho" onclick="addCarrinho('${itemNome}', ${itemPreco})"> + </button>
 
-            <span class="quantity"> 1 </span>
+            <div id="topoItem">
+                <span>${itemNome}</span>
 
-            <button class="remove" id="botaoCarrinho" onclick="removeCarrinho('${itemNome}', ${itemPreco})"> - </button>
+                <span class="preco-total">R$${itemPreco.toFixed(2)}</span>
+            </div>
 
-            <span class="preco-total">R$${itemPreco.toFixed(2)}</span>
+
+            <div class="conteudoItem">
+                <button class="add" id="botaoCarrinho" onclick="addCarrinho('${itemNome}', ${itemPreco})"> + </button>
+
+                <span class="quantity"> 1 </span>
+
+                <button class="remove" id="botaoCarrinho" onclick="removeCarrinho('${itemNome}', ${itemPreco})"> - </button>
+            </div>
+
         </div>
         `
 
@@ -66,7 +74,7 @@ function limparCarrinho() {
 
     document.getElementById("preco-total").innerHTML = "Valor Total R$0.00";
 
-    for(let itemNome in itensCarrinho) {
+    for (let itemNome in itensCarrinho) {
         delete itensCarrinho[itemNome]
     }
 
@@ -81,4 +89,10 @@ function toggleCarrinho() {
     } else {
         itensCarrinhoDiv.style.display = "none"
     }
+}
+
+// fechar menu
+function fecharMenu() {
+    const itensCarrinhoDiv = document.getElementById("carrinho-itens")
+    itensCarrinhoDiv.style.display = "none"
 }

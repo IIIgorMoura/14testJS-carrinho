@@ -26,7 +26,7 @@
                 <button id="botaoBuscar" onclick="buscarSite()">Buscar</button>
             </div>
 
-            <div id="carrinho-icon" onclick="toggleCarrinho()" >
+            <div id="carrinho-icon" onclick="toggleCarrinho()">
                 <div class="imagem">
                     <i id="carrinhoBranco" class="fa-solid fa-basket-shopping fa-2xl"></i>
                 </div>
@@ -35,13 +35,18 @@
             </div>
 
             <div id="carrinho-itens" style="display: none;">
-                <ul id="itens-lista"></ul>
 
-                <span id="preco-total">
-                    Valor Total: R$0,00
-                </span>
+                <section id="caixaTopoMenu">
+                    <i onclick="fecharMenu()" id="fecharMenu" class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+
+                    <span id="preco-total">
+                        Valor Total: R$0,00
+                    </span>
+                </section>
 
                 <button onclick="limparCarrinho()">Limpar Carrinho</button>
+
+                <ul id="itens-lista"></ul>
             </div>
         </div>
     </header>
@@ -56,7 +61,8 @@
                         <div class="infos">
                             <h2 class="espacamento">MEGA DA VIRADA</h2>
                             <p class="espacamento">R$ 100.00</p>
-                            <button class="espacamento" onclick="addCarrinho('MEGA DA VIRADA', 100.00)">Adicionar ao carrinho</button>
+                            <button class="espacamento" onclick="addCarrinho('MEGA DA VIRADA', 100.00)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
 
@@ -65,7 +71,8 @@
                         <div class="infos">
                             <h2 class="espacamento">QUINA</h2>
                             <p class="espacamento">R$ 1.50</p>
-                            <button class="espacamento" onclick="addCarrinho('QUINA', 1.50)">Adicionar ao carrinho</button>
+                            <button class="espacamento" onclick="addCarrinho('QUINA', 1.50)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
 
@@ -74,7 +81,8 @@
                         <div class="infos">
                             <h2 class="espacamento">MEGA SENA</h2>
                             <p class="espacamento">R$ 1.00</p>
-                            <button class="espacamento" onclick="addCarrinho('MEGA SENA', 1.00)">Adicionar ao carrinho</button>
+                            <button class="espacamento" onclick="addCarrinho('MEGA SENA', 1.00)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -85,7 +93,8 @@
                         <div class="infos">
                             <h2 class="espacamento">LOTOFÁCIL</h2>
                             <p class="espacamento">R$ 2.00</p>
-                            <button class="espacamento" onclick="addCarrinho('LOTOFÁCIL', 2.00)">Adicionar ao carrinho</button>
+                            <button class="espacamento" onclick="addCarrinho('LOTOFÁCIL', 2.00)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
 
@@ -94,7 +103,8 @@
                         <div class="infos">
                             <h2 class="espacamento">DUPLA SENA</h2>
                             <p class="espacamento">R$ 3.00</p>
-                            <button class="espacamento" onclick="addCarrinho('DUPLA SENA', 3.00)">Adicionar ao carrinho</button>
+                            <button class="espacamento" onclick="addCarrinho('DUPLA SENA', 3.00)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
 
@@ -103,7 +113,8 @@
                         <div class="infos">
                             <h2 class="espacamento">LOTOMANIA</h2>
                             <p class="espacamento">R$ 5.00</p>
-                            <button class="espacamento" onclick="addCarrinho('LOTOMANIA', 5.00)">Adicionar ao carrinho</button>
+                            <button class="espacamento" onclick="addCarrinho('LOTOMANIA', 5.00)">Adicionar ao
+                                carrinho</button>
                         </div>
                     </div>
                 </div>
